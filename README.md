@@ -24,7 +24,8 @@ py -m venv .venv
 
 The dataset is included at `data/raw/H2.csv`.
 Open [preprocessing.ipynb](notebooks/preprocessing.ipynb) in VS Code and select
-the `.venv` kernel to run locally.
+the `.venv` kernel to run locally. Keep `DATA_SOURCE = "local"` in the setup cell;
+change `LOCAL_DATA_PATH` if your file is elsewhere.
 
 ## Colab in VS Code
 
@@ -32,13 +33,14 @@ Install the official [Google Colab extension](https://marketplace.visualstudio.c
 Open the notebook, choose **Select Kernel > Colab**, and sign in with your Google account.
 Start with a CPU runtime.
 
-For the existing Drive cell, put the dataset at:
+Set `DATA_SOURCE = "drive"` in the notebook's setup cell. Put the dataset at
+the following Drive location, or update `DRIVE_DATA_PATH`:
 
 ```text
 My Drive/hotel-booking-project/data/H2.csv
 ```
 
-Run the setup, Drive, and loading cells in order. Your local files and `.venv`
+Run the setup, data-source, and loading cells in order. Your local files and `.venv`
 are separate from the Colab runtime. If dependencies need installing remotely,
 upload `requirements.txt` using **Upload to Colab**, then run:
 
@@ -53,7 +55,7 @@ Restart the kernel if prompted. Save generated results to Drive before ending a 
 - `src/hotel_ml/`: reusable preprocessing, features, task code, evaluation, and inference.
 - `notebooks/`: exploration and experiments, grouped by task.
 - `configs/`: experiment settings, grouped by task and version.
-- `data/`: original and processed datasets; contents stay out of Git.
+- `data/`: the included H2.csv and ignored processed datasets.
 - `outputs/`: generated experiment results; contents stay out of Git.
 - `reports/`: selected figures and milestone reports.
 - `tests/`: checks for the code we add.
