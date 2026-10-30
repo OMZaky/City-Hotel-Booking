@@ -22,7 +22,7 @@ py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-Put your copy of `H2.csv` in `data/raw/`. The dataset is not included in Git.
+The dataset is included at `data/raw/H2.csv`.
 Open [preprocessing.ipynb](notebooks/preprocessing.ipynb) in VS Code and select
 the `.venv` kernel to run locally.
 
@@ -60,12 +60,3 @@ Restart the kernel if prompted. Save generated results to Drive before ending a 
 
 Most folders are empty for now. Their `.gitkeep` files only make them visible in Git.
 The [course brief](docs/CSE382_Project_Description_Milestones.pdf) has the full requirements.
-
-## Working together
-
-All five members use their own GitHub accounts. Create a branch for your work,
-make small commits, and open a pull request when it's ready. Merging into `main`
-requires one teammate's approval.
-
-Coordinate before editing the same notebook, clear its outputs before committing,
-and keep datasets and fitted models out of Git.
