@@ -7,3 +7,4 @@
 *.md text eol=lf
 *.ipynb text eol=lf
 *.pdf binary
+data/raw/H2.csv -text -whitespace
